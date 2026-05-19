@@ -1,0 +1,1262 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Index - Rusco Foundation</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Roboto:wght@400;500&display=swap"
+    rel="stylesheet">
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+  <style>
+    .team-member .member-img {
+      width: 100%;
+      height: 320px;
+      /* choose size you want */
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .team-member .member-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      /* uniform size, crops edges slightly */
+    }
+
+    /* ===== Modern About Section Styling ===== */
+    .modern-about {
+      padding: 80px 0;
+      background: #f8f9fc;
+    }
+
+    /* About Card */
+    .about-card {
+      background: #ffffff;
+      padding: 35px;
+      border-radius: 18px;
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.05);
+    }
+
+    .about-card h3 {
+      font-weight: 600;
+      margin-bottom: 20px;
+      color: #0d6efd;
+    }
+
+    .about-card p {
+      color: #555;
+      line-height: 1.8;
+    }
+
+    /* Info Cards */
+    .info-card {
+      background: #ffffff;
+      padding: 30px;
+      border-radius: 18px;
+      box-shadow: 0 12px 35px rgba(0, 0, 0, 0.05);
+      transition: all 0.3s ease;
+    }
+
+    .info-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 20px 45px rgba(0, 0, 0, 0.08);
+    }
+
+    .info-card h5 {
+      font-weight: 600;
+      margin-bottom: 15px;
+      color: #0d6efd;
+    }
+
+    .info-card p.highlight-text {
+      color: #0d6efd;
+      font-weight: 500;
+      font-size: 16px;
+    }
+
+    /* ===== Modern Professional List Style ===== */
+    .pro-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .pro-list li {
+      padding: 14px 18px;
+      margin-bottom: 12px;
+      background: #f8f9fc;
+      border-radius: 10px;
+      font-size: 15px;
+      color: #444;
+      border: 1px solid #eef1f6;
+      transition: all 0.3s ease;
+      position: relative;
+    }
+
+    .pro-list li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: 4px;
+      background: #0d6efd;
+      border-radius: 10px 0 0 10px;
+    }
+
+    .pro-list li:hover {
+      background: #eef4ff;
+      transform: translateX(6px);
+    }
+
+    /* ===== Section Title Styling ===== */
+    .section-title h2 {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 700;
+      font-size: 36px;
+      /* modern heading size */
+      color: #0d6efd;
+      /* primary accent color */
+      margin-bottom: 10px;
+      line-height: 1.2;
+    }
+
+    .section-title p {
+      font-family: 'Roboto', sans-serif;
+      font-weight: 500;
+      font-size: 18px;
+      /* subtitle size */
+      color: #555;
+      margin-bottom: 0;
+    }
+
+    /* ===== Modern Why Us Section ===== */
+    .modern-why-us {
+      padding: 80px 0;
+      background: #f8f9fc;
+    }
+
+    /* Card Styling */
+    .modern-why-us .card-item {
+      background: #ffffff;
+      padding: 30px 25px;
+      border-radius: 18px;
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.05);
+      transition: all 0.3s ease;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .modern-why-us .card-item h4 {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 600;
+      font-size: 20px;
+      color: #0d6efd;
+      margin-bottom: 15px;
+    }
+
+    .modern-why-us .card-item h4 a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .modern-why-us .card-item p {
+      font-family: 'Roboto', sans-serif;
+      font-weight: 400;
+      font-size: 15px;
+      color: #555;
+      line-height: 1.7;
+      flex-grow: 1;
+    }
+
+    .modern-why-us .card-item:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 20px 45px rgba(0, 0, 0, 0.08);
+    }
+
+    /* Spacing between cards for small screens */
+    @media (max-width: 991px) {
+      .modern-why-us .card-item {
+        margin-bottom: 20px;
+      }
+    }
+
+    /* ===== Stats Section Modern Cards ===== */
+    .stats.section.light-background {
+      background: #f8f9fc;
+      padding: 80px 0;
+    }
+
+    .stats-item {
+      background: #ffffff;
+      padding: 30px 20px;
+      border-radius: 18px;
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      min-height: 200px;
+      /* ensures all cards have same height */
+    }
+
+    .stats-item p {
+      font-family: 'Roboto', sans-serif;
+      font-weight: 500;
+      color: #555;
+      margin-top: 15px;
+      font-size: 15px;
+      line-height: 1.6;
+    }
+
+    .stats-item:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 25px 50px rgba(0, 0, 0, 0.08);
+    }
+
+    .stats-icon {
+      font-size: 40px;
+      color: #0d6efd;
+    }
+
+    /* ===== Team Section Modern ===== */
+    .team.modern-team {
+      padding: 80px 0;
+      background: #f8f9fc;
+    }
+
+    .team-member {
+      background: #ffffff;
+      padding: 30px 20px;
+      border-radius: 18px;
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      width: 100%;
+    }
+
+    .team-member:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 25px 50px rgba(0, 0, 0, 0.1);
+    }
+
+    .team-member .member-img img {
+      width: 140px;
+      height: 140px;
+      object-fit: cover;
+    }
+
+    .team-member .member-info h4 {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 600;
+      margin-bottom: 5px;
+      font-size: 18px;
+    }
+
+    .team-member .member-info span {
+      font-family: 'Roboto', sans-serif;
+      color: #555;
+      font-size: 14px;
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    .team-member .social a {
+      display: inline-block;
+      margin: 0 5px;
+      color: #0d6efd;
+      font-size: 16px;
+      transition: color 0.3s ease;
+    }
+
+    /* FAQ Section */
+    .faq.section {
+      padding: 80px 0;
+      background-color: #f9fafc;
+      font-family: 'Roboto', sans-serif;
+    }
+
+    .faq.section .section-title h2 {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 700;
+      font-size: 32px;
+      color: #222;
+      text-align: center;
+    }
+
+    .faq.section .section-title p {
+      font-size: 16px;
+      color: #555;
+      margin-top: 5px;
+      text-align: center;
+    }
+
+    /* FAQ Card */
+    .faq-card {
+      background: #fff;
+      border-radius: 12px;
+      padding: 25px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+      transition: transform 0.3s, box-shadow 0.3s;
+      position: relative;
+      height: 100%;
+    }
+
+    .faq-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12);
+    }
+
+    /* Icon inside card */
+    .faq-card .faq-icon {
+      width: 50px;
+      height: 50px;
+      background-color: #0d6efd;
+      color: #fff;
+      font-size: 24px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 15px;
+    }
+
+    /* Card heading */
+    .faq-card h4 {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 600;
+      font-size: 18px;
+      color: #222;
+      margin-bottom: 10px;
+    }
+
+    /* Card paragraph */
+    .faq-card p {
+      font-size: 15px;
+      color: #555;
+      line-height: 1.6;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 991px) {
+      .faq-card {
+        margin-bottom: 20px;
+      }
+    }
+
+    .copyright-container {
+      border-top: 1px solid #e0e0e0;
+      /* subtle top border */
+      padding-top: 15px;
+      font-family: 'Poppins', sans-serif;
+      /* modern clean font */
+      font-size: 14px;
+      color: #555;
+    }
+
+    .copyright-container a {
+      color: #1e88e5;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .copyright-container a:hover {
+      color: #0d47a1;
+    }
+
+   .about-slider .carousel-inner {
+  overflow: hidden;
+  border-radius: 1rem; /* keep rounded-4 look */
+}
+
+.about-slider .carousel-item img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+/* Dots only */
+.about-slider .carousel-indicators {
+  bottom: 10px;
+}
+
+.about-slider .carousel-indicators button {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.3);
+  border: none;
+  margin: 0 4px;
+}
+
+.about-slider .carousel-indicators .active {
+  background-color: #000;
+}
+
+/* Hide arrows completely */
+.about-slider .carousel-control-prev,
+.about-slider .carousel-control-next {
+  display: none;
+}
+  </style>
+
+
+</head>
+
+<body class="index-page">
+
+  <header id="header" class="header sticky-top">
+
+    <div class="topbar d-flex align-items-center">
+      <div class="container d-flex justify-content-center justify-content-md-between">
+        <div class="contact-info d-flex align-items-center">
+          <i class="bi bi-envelope d-flex align-items-center"><a
+              href="mailto:ruscofoundation@outlook.com">ruscofoundation@outlook.com</a></i>
+          <i class="bi bi-phone d-flex align-items-center ms-4"><span>0663582841</span></i>
+        </div>
+        <div class="social-links d-none d-md-flex align-items-center">
+          <a href="#" class="twitter"><i class="bi bi-twitter-x"></i></a>
+          <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+          <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+          <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+        </div>
+      </div>
+    </div><!-- End Top Bar -->
+
+    <div class="branding d-flex align-items-cente">
+
+      <div class="container position-relative d-flex align-items-center justify-content-between">
+        <a href="index.html" class="logo d-flex align-items-center">
+          <!-- Uncomment the line below if you also wish to use an image logo -->
+          <img src="assets/img/rusco.png" style="border-radius: 80px;" alt="">
+          <h1 class="sitename">Rusco Foundation</h1>
+        </a>
+
+        <nav id="navmenu" class="navmenu">
+          <ul>
+            <li><a href="#hero" class="active">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#services">Our Services</a></li>
+            <!-- <li><a href="#portfolio">Portfolio</a></li> -->
+            <li><a href="#team">Team</a></li>
+            <li class="dropdown">
+              <a href="#"><span>Programs</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+              <ul>
+                <li><a href="#">Education Support</a></li>
+                <li class="dropdown">
+                  <a href="#"><span>Disaster Relief</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                  <ul>
+                    <li><a href="#">Flood Relief</a></li>
+                    <li><a href="#">Accident Support</a></li>
+                    <li><a href="#">Emergency Aid</a></li>
+                    <li><a href="#">Volunteer Programs</a></li>
+                    <li><a href="#">Donation Drives</a></li>
+                  </ul>
+                </li>
+                <li><a href="#">Community Development</a></li>
+                <li><a href="#">Health Programs</a></li>
+                <li><a href="#">Advocacy</a></li>
+              </ul>
+            </li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+          <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+        </nav>
+
+
+      </div>
+
+    </div>
+
+  </header>
+
+  <main class="main">
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero section dark-background">
+
+      <div id="hero-carousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="5000">
+
+        <div class="carousel-item active">
+          <img src="assets/img/hero-carousel/hero-carousel-1.png" alt="">
+          <div class="carousel-container">
+            <h2>Welcome to Rusco Foundation<br></h2>
+            <p>
+              Rusco Foundation is dedicated to building economic security for accident and disaster victims.
+              We provide support, recovery assistance, and sustainable solutions that help affected families
+              rebuild their lives with dignity and hope.
+            </p>
+            <a href="#featured-services" class="btn-get-started">Get Support</a>
+          </div>
+        </div><!-- End Carousel Item -->
+
+        <div class="carousel-item">
+          <img src="assets/img/hero-carousel/hero-carousel-2.png" alt="">
+          <div class="carousel-container">
+            <h2>Restoring Hope After Crisis</h2>
+            <p>
+              When disasters strike, Rusco Foundation stands with communities. We work to restore
+              financial stability, provide emergency assistance, and create long-term economic
+              opportunities for those affected by accidents and natural disasters.
+            </p>
+            <a href="#featured-services" class="btn-get-started">Learn More</a>
+          </div>
+        </div><!-- End Carousel Item -->
+
+        <div class="carousel-item">
+          <img src="assets/img/hero-carousel/hero-carousel-3.png" alt="">
+          <div class="carousel-container">
+            <h2>Empowering Recovery & Stability</h2>
+            <p>
+              Our mission is to empower victims through economic support programs,
+              community partnerships, and recovery initiatives that promote resilience,
+              independence, and a secure future.
+            </p>
+            <a href="#featured-services" class="btn-get-started">Join Us</a>
+          </div>
+        </div><!-- End Carousel Item -->
+
+        <a class="carousel-control-prev" href="#hero-carousel" role="button" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon bi bi-chevron-left" aria-hidden="true"></span>
+        </a>
+
+        <a class="carousel-control-next" href="#hero-carousel" role="button" data-bs-slide="next">
+          <span class="carousel-control-next-icon bi bi-chevron-right" aria-hidden="true"></span>
+        </a>
+
+        <ol class="carousel-indicators"></ol>
+
+      </div>
+
+    </section><!-- /Hero Section -->
+
+    <!-- About Section -->
+    <!-- About Section -->
+    <section id="about" class="about section modern-about">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>About Rusco Foundation</h2>
+        <p>Building economic security for accident and disaster victims</p>
+      </div>
+
+      <div class="container">
+        <div class="row gy-4">
+
+          <!-- LEFT SIDE -->
+          <!-- LEFT SIDE -->
+          <!-- About Image Slider -->
+          <!-- LEFT SIDE -->
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+
+            <div class="about-card">
+              <h3>Supporting Recovery, Restoring Stability, Rebuilding Lives</h3>
+
+              <!-- Image Slider -->
+              <div id="about-slider" class="carousel slide carousel-fade mb-4" data-bs-ride="carousel"
+                data-bs-interval="3000">
+                <div class="carousel-inner rounded-4 overflow-hidden">
+                  <div class="carousel-item active">
+                    <img src="assets/img/about.png" class="img-fluid" alt="Slide 1">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="assets/img/about1.png" class="img-fluid" alt="Slide 2">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="assets/img/about2.png" class="img-fluid" alt="Slide 3">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="assets/img/about3.png" class="img-fluid" alt="Slide 4">
+                  </div>
+                </div>
+
+                <!-- Dot indicators only -->
+                <div class="carousel-indicators">
+                  <button type="button" data-bs-target="#about-slider" data-bs-slide-to="0" class="active"></button>
+                  <button type="button" data-bs-target="#about-slider" data-bs-slide-to="1"></button>
+                  <button type="button" data-bs-target="#about-slider" data-bs-slide-to="2"></button>
+                  <button type="button" data-bs-target="#about-slider" data-bs-slide-to="3"></button>
+                </div>
+              </div>
+
+              <p>
+                Rusco Foundation is a humanitarian organization committed to protecting and restoring
+                the economic well-being of individuals and families affected by accidents and disasters.
+                We believe that recovery is not only about survival, but about rebuilding a stable future.
+              </p>
+
+              <p>
+                We collaborate with social security institutions such as the National Social Security Fund (NSSF)
+                to ensure effective service delivery for people working in both government and non-governmental
+                organizations. Our goal is to help individuals understand and access social protection systems
+                that secure their future.
+              </p>
+            </div>
+
+            <div class="info-card mt-4">
+              <h5>Benefits of Social Security (NSSF)</h5>
+              <ul class="pro-list">
+                <li>Funeral Assistance Benefit</li>
+                <li>Maternity Benefits</li>
+                <li>Medical Care Services</li>
+                <li>Unemployment Benefits</li>
+                <li>Old Age Pension</li>
+                <li>Disability Pension</li>
+                <li>Survivor’s Pension</li>
+              </ul>
+            </div>
+
+          </div>
+
+          <!-- RIGHT SIDE -->
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="250">
+
+            <div class="info-card">
+              <p class="fst-italic highlight-text">
+                We stand with victims in their most difficult moments and walk with them toward recovery.
+              </p>
+
+              <ul class="pro-list">
+                <li>Emergency financial assistance for accident and disaster victims</li>
+                <li>Long-term economic recovery and livelihood support</li>
+                <li>Community-based programs that strengthen resilience and stability</li>
+                <li>Education on how to join social security funds such as NSSF</li>
+                <li>Guidance on financial protection and risk management solutions</li>
+              </ul>
+            </div>
+
+            <div class="info-card mt-4">
+              <h5>Insurance Awareness Programs</h5>
+              <ul class="pro-list">
+                <li>Motor Vehicle Insurance</li>
+                <li>Electronic Equipment Insurance</li>
+                <li>Money Theft Insurance</li>
+                <li>Business Insurance</li>
+                <li>Transportation Insurance</li>
+                <li>Irrigation Machine Insurance</li>
+                <li>Construction Insurance (Buildings & Roads)</li>
+                <li>Fire and Fire Damage Insurance</li>
+              </ul>
+            </div>
+
+            <div class="position-relative mt-4">
+              <img src="assets/img/about-2.png" class="img-fluid rounded-4 shadow-sm" alt="">
+              <a href="#" class="glightbox pulsating-play-btn"></a>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+
+    </section>
+
+    <!-- Why Us Section -->
+    <section id="why-us" class="why-us section modern-why-us">
+
+      <div class="container">
+
+        <div class="row gy-4">
+
+          <!-- Card 1 -->
+          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="card-item">
+              <h4><a href="#" class="stretched-link">Rapid Emergency Support</a></h4>
+              <p>
+                We provide **immediate financial assistance** to accident and disaster victims,
+                helping them stabilize and begin recovery without delay.
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="card-item">
+              <h4><a href="#" class="stretched-link">Social Protection & Education</a></h4>
+              <p>
+                We educate communities on **joining social security funds like NSSF** and understanding
+                the benefits that help maintain long-term financial security.
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="300">
+            <div class="card-item">
+              <h4><a href="#" class="stretched-link">Insurance & Risk Awareness</a></h4>
+              <p>
+                We provide guidance on **insurance and risk management**, including coverage for
+                vehicles, business, construction, and unexpected disasters.
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- Stats Section -->
+    <!-- Stats Section -->
+    <section id="stats" class="stats section light-background">
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row gy-4">
+
+          <!-- Beneficiaries -->
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+            <div class="stats-item text-center">
+              <i class="bi bi-emoji-smile stats-icon"></i>
+              <p>Individuals Supported Through Social Security Programs</p>
+            </div>
+          </div>
+
+          <!-- Projects -->
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+            <div class="stats-item text-center">
+              <i class="bi bi-journal-richtext stats-icon"></i>
+              <p>Community Education & Insurance Awareness Projects</p>
+            </div>
+          </div>
+
+          <!-- Hours of Assistance -->
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+            <div class="stats-item text-center">
+              <i class="bi bi-headset stats-icon"></i>
+              <p>Hours of Support & Financial Guidance Provided</p>
+            </div>
+          </div>
+
+          <!-- Volunteers -->
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+            <div class="stats-item text-center">
+              <i class="bi bi-people stats-icon"></i>
+              <p>Active Volunteers & Community Partners</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Our Services</h2>
+        <p>Practical support that restores economic security after accidents and disasters</p>
+      </div>
+
+      <div class="container">
+
+        <div class="row gy-4">
+
+          <!-- Emergency Financial Assistance -->
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="service-item position-relative text-center">
+              <div class="icon">
+                <i class="bi bi-cash-stack"></i>
+              </div>
+              <a href="service-details.html" class="stretched-link">
+                <h3>Emergency Financial Assistance</h3>
+              </a>
+              <p>
+                Immediate economic relief for victims of accidents and disasters,
+                helping families cover urgent needs and stabilize their situation.
+              </p>
+            </div>
+          </div>
+
+          <!-- Recovery & Livelihood Support -->
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="service-item position-relative text-center">
+              <div class="icon">
+                <i class="bi bi-graph-up"></i>
+              </div>
+              <a href="service-details.html" class="stretched-link">
+                <h3>Recovery & Livelihood Support</h3>
+              </a>
+              <p>
+                Programs that help survivors rebuild income sources,
+                restart small businesses, and regain financial independence.
+              </p>
+            </div>
+          </div>
+
+          <!-- Community Recovery Projects -->
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="service-item position-relative text-center">
+              <div class="icon">
+                <i class="bi bi-building"></i>
+              </div>
+              <a href="service-details.html" class="stretched-link">
+                <h3>Community Recovery Projects</h3>
+              </a>
+              <p>
+                Community-driven initiatives that restore infrastructure,
+                strengthen resilience, and support collective recovery.
+              </p>
+            </div>
+          </div>
+
+          <!-- Victim Advocacy & Guidance -->
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+            <div class="service-item position-relative text-center">
+              <div class="icon">
+                <i class="bi bi-person-badge"></i>
+              </div>
+              <a href="service-details.html" class="stretched-link">
+                <h3>Victim Advocacy & Guidance</h3>
+              </a>
+              <p>
+                Support services that guide victims through recovery processes,
+                access to aid, and financial planning after crisis.
+              </p>
+            </div>
+          </div>
+
+          <!-- Training & Capacity Building -->
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
+            <div class="service-item position-relative text-center">
+              <div class="icon">
+                <i class="bi bi-journal-check"></i>
+              </div>
+              <a href="service-details.html" class="stretched-link">
+                <h3>Training & Capacity Building</h3>
+              </a>
+              <p>
+                Skills training and empowerment programs that prepare
+                communities for economic resilience and future stability.
+              </p>
+            </div>
+          </div>
+
+          <!-- Counseling & Social Support -->
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
+            <div class="service-item position-relative text-center">
+              <div class="icon">
+                <i class="bi bi-heart-pulse"></i>
+              </div>
+              <a href="service-details.html" class="stretched-link">
+                <h3>Counseling & Social Support</h3>
+              </a>
+              <p>
+                Emotional and social support services that help victims
+                recover mentally while rebuilding their livelihoods.
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- Team Section -->
+    <section id="team" class="team section modern-team">
+
+      <!-- Section Title -->
+      <div class="container section-title text-center" data-aos="fade-up">
+        <h2>Our Team</h2>
+        <p>Meet the dedicated individuals driving Rusco Foundation’s mission to support accident and disaster victims.
+        </p>
+      </div>
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="row gy-5">
+
+          <!-- Team Member 1 -->
+          <div class="col-xl-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="200">
+            <div class="team-member text-center">
+              <div class="member-img">
+                <img src="assets/img/team/team-1.png" class="img-fluid rounded-circle shadow-sm" alt="">
+              </div>
+              <div class="member-info mt-3">
+                <h4>Celestine Kabalyango</h4>
+                <span>Chief Executive Officer</span>
+                <div class="social mt-2">
+                  <a href="#"><i class="bi bi-twitter"></i></a>
+                  <a href="#"><i class="bi bi-facebook"></i></a>
+                  <a href="#"><i class="bi bi-instagram"></i></a>
+                  <a href="#"><i class="bi bi-linkedin"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Team Member 2 -->
+          <div class="col-xl-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="400">
+            <div class="team-member text-center">
+              <div class="member-img">
+                <img src="assets/img/team/team-2.png" class="img-fluid rounded-circle shadow-sm" alt="">
+              </div>
+              <div class="member-info mt-3">
+                <h4>Sarah Johnson</h4>
+                <span>Product Manager</span>
+                <div class="social mt-2">
+                  <a href="#"><i class="bi bi-twitter"></i></a>
+                  <a href="#"><i class="bi bi-facebook"></i></a>
+                  <a href="#"><i class="bi bi-instagram"></i></a>
+                  <a href="#"><i class="bi bi-linkedin"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Team Member 3 -->
+          <div class="col-xl-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="600">
+            <div class="team-member text-center">
+              <div class="member-img">
+                <img src="assets/img/team/team-3.png" class="img-fluid rounded-circle shadow-sm" alt="">
+              </div>
+              <div class="member-info mt-3">
+                <h4>William Anderson</h4>
+                <span>CTO</span>
+                <div class="social mt-2">
+                  <a href="#"><i class="bi bi-twitter"></i></a>
+                  <a href="#"><i class="bi bi-facebook"></i></a>
+                  <a href="#"><i class="bi bi-instagram"></i></a>
+                  <a href="#"><i class="bi bi-linkedin"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="faq section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Frequently Asked Questions</h2>
+        <p>Answers about our support for accident and disaster victims</p>
+      </div>
+
+      <div class="container">
+        <div class="row gy-4">
+
+          <!-- Card 1 -->
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="faq-card">
+              <div class="faq-icon"><i class="bi bi-people-fill"></i></div>
+              <h4>Who can receive help from Rusco Foundation?</h4>
+              <p>
+                We support individuals and families affected by accidents and disasters
+                who are facing economic hardship and need assistance to recover and rebuild.
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="faq-card">
+              <div class="faq-icon"><i class="bi bi-cash-stack"></i></div>
+              <h4>What type of assistance do you provide?</h4>
+              <p>
+                Our support includes emergency financial aid, livelihood recovery programs,
+                community rebuilding initiatives, and guidance for long-term economic stability.
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="faq-card">
+              <div class="faq-icon"><i class="bi bi-telephone-plus-fill"></i></div>
+              <h4>How can someone apply for assistance?</h4>
+              <p>
+                Victims or their representatives can contact us through our support channels
+                or local partners. Applications are reviewed based on urgency and need.
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="400">
+            <div class="faq-card">
+              <div class="faq-icon"><i class="bi bi-heart-fill"></i></div>
+              <h4>How can I support Rusco Foundation?</h4>
+              <p>
+                You can support our mission through donations, volunteering,
+                partnerships, or advocacy that helps expand assistance to victims.
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 5 -->
+          <!-- <div class="col-lg-6" data-aos="fade-up" data-aos-delay="500">
+        <div class="faq-card">
+          <div class="faq-icon"><i class="bi bi-people"></i></div>
+          <h4>Do you work with local communities?</h4>
+          <p>
+            Yes. We collaborate closely with community leaders, organizations,
+            and partners to ensure effective and culturally appropriate recovery support.
+          </p>
+        </div>
+      </div> -->
+
+        </div>
+      </div>
+    </section>
+    <!-- FAQ Section End-->
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Contact Us</h2>
+        <p>Reach out for support, partnerships, or assistance</p>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-6">
+            <div class="info-item d-flex flex-column justify-content-center align-items-center" data-aos="fade-up"
+              data-aos-delay="200">
+              <i class="bi bi-geo-alt"></i>
+              <h3>Head Office</h3>
+              <p>Kirumba, Mwanza – Ilemela</p>
+              <p>Branch: P.O. Box 33221, Moshi</p>
+            </div>
+          </div><!-- End Info Item -->
+
+          <div class="col-lg-3 col-md-6">
+            <div class="info-item d-flex flex-column justify-content-center align-items-center" data-aos="fade-up"
+              data-aos-delay="300">
+              <i class="bi bi-telephone"></i>
+              <h3>Call Us</h3>
+              <p>+255663582841</p>
+            </div>
+          </div><!-- End Info Item -->
+
+          <div class="col-lg-3 col-md-6">
+            <div class="info-item d-flex flex-column justify-content-center align-items-center" data-aos="fade-up"
+              data-aos-delay="400">
+              <i class="bi bi-envelope"></i>
+              <h3>Email Us</h3>
+              <p>info@ruscofoundation.org</p>
+            </div>
+          </div><!-- End Info Item -->
+
+        </div>
+
+        <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="400">
+          <div class="row gy-4">
+            <div class="col-md-6">
+              <input type="text" name="name" class="form-control" placeholder="Your Name" required>
+            </div>
+            <div class="col-md-6">
+              <input type="email" class="form-control" name="email" placeholder="Your Email" required>
+            </div>
+            <div class="col-md-12">
+              <input type="text" class="form-control" name="subject" placeholder="Subject" required>
+            </div>
+            <div class="col-md-12">
+              <textarea class="form-control" name="message" rows="6" placeholder="How can we help you?"
+                required></textarea>
+            </div>
+            <div class="col-md-12 text-center">
+              <div class="loading">Sending...</div>
+              <div class="error-message"></div>
+              <div class="sent-message"></div> <!-- success message will appear here -->
+              <button type="submit">Send Message</button>
+            </div>
+          </div>
+        </form>
+
+        <!-- End Contact Form -->
+
+      </div>
+
+    </section><!-- /Contact Section -->
+
+  </main>
+
+  <!-- Footer Section -->
+  <footer id="footer" class="footer light-background">
+
+    <div class="container footer-top">
+      <div class="row gy-4">
+
+        <!-- About Rusco Foundation -->
+        <div class="col-lg-4 col-md-6 footer-about">
+          <a href="index.html" class="logo d-flex align-items-center">
+            <span class="sitename">Rusco Foundation</span>
+          </a>
+          <p>Dedicated to building economic security for accident and disaster victims across Tanzania.</p>
+          <div class="footer-contact pt-3">
+            <p>Head Office: P.O. BOX 1310, Mwanza</p>
+            <p>Branch Office: P.O. BOX 1910, Moshi</p>
+            <p class="mt-3"><strong>Phone:</strong> <span>0625781003</span></p>
+            <p><strong>Email:</strong> <span>ruscofoundation@outlook.com</span></p>
+          </div>
+          <div class="social-links d-flex mt-4">
+            <a href="#"><i class="bi bi-twitter-x"></i></a>
+            <a href="#"><i class="bi bi-facebook"></i></a>
+            <a href="#"><i class="bi bi-instagram"></i></a>
+            <a href="#"><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+
+        <!-- Useful Links -->
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About Rusco Foundation</a></li>
+            <li><a href="#">Our Services</a></li>
+            <li><a href="#">Programs</a></li>
+            <li><a href="#">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <!-- Social Programs -->
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Social Programs</h4>
+          <ul>
+            <li><a href="#">Emergency Support</a></li>
+            <li><a href="#">Recovery & Livelihood</a></li>
+            <li><a href="#">Insurance Awareness</a></li>
+            <li><a href="#">Community Projects</a></li>
+            <li><a href="#">Volunteer Opportunities</a></li>
+          </ul>
+        </div>
+
+        <!-- Educational Resources -->
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Education</h4>
+          <ul>
+            <li><a href="#">Social Security Guidance (NSSF)</a></li>
+            <li><a href="#">Financial Literacy</a></li>
+            <li><a href="#">Risk Management Tips</a></li>
+            <li><a href="#">Insurance Coverage Info</a></li>
+            <li><a href="#">Workshops & Seminars</a></li>
+          </ul>
+        </div>
+
+        <!-- Support & Community -->
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Community</h4>
+          <ul>
+            <li><a href="#">Local Partnerships</a></li>
+            <li><a href="#">Volunteer Programs</a></li>
+            <li><a href="#">Donations & Funding</a></li>
+            <li><a href="#">News & Updates</a></li>
+            <li><a href="#">FAQs</a></li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="container d-flex justify-content-between align-items-center mt-4 copyright-container">
+      <p class="mb-0">© <strong>Rusco Foundation</strong> <span>All Rights Reserved</span></p>
+      <div class="credits mb-0">
+        Designed & Maintained by <a href="https://nactech.pythonanywhere.com/">Nac Technologies</a>
+      </div>
+    </div>
+
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+  <script>
+    document.getElementById('contactForm').addEventListener('submit', function (e) {
+      e.preventDefault(); // Prevent default form submit
+
+      const form = this;
+      const formData = new FormData(form);
+
+      const loading = form.querySelector('.loading');
+      const errorMessage = form.querySelector('.error-message');
+      const sentMessage = form.querySelector('.sent-message');
+
+      loading.style.display = 'block';
+      errorMessage.textContent = '';
+      sentMessage.style.display = 'none';
+
+      fetch(form.action, {
+        method: 'POST',
+        body: formData
+      })
+        .then(response => response.json())
+        .then(data => {
+          loading.style.display = 'none';
+          if (data.status === 'success') {
+            sentMessage.textContent = data.message;
+            sentMessage.style.display = 'block';
+            form.reset();
+          } else {
+            errorMessage.textContent = data.message;
+          }
+        })
+        .catch(error => {
+          loading.style.display = 'none';
+          errorMessage.textContent = 'An error occurred. Please try again.';
+          console.error(error);
+        });
+    });
+
+
+  </script>
+
+</body>
+
+</html>
