@@ -423,6 +423,221 @@
 .about-slider .carousel-control-next {
   display: none;
 }
+
+    
+/*New features added to a website */
+/* ============================= */
+/* NEWS / EVENTS MODERN SECTION  */
+/* ============================= */
+
+.news-events-wrapper {
+  background: #f5f7fb;
+  padding: 90px 0;
+}
+
+/* Section Header */
+.news-main-title {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.news-main-title span {
+  color: #c1121f;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.news-main-title h2 {
+  font-size: 42px;
+  font-weight: 700;
+  color: #0d2b5c;
+  margin-top: 10px;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* News Cards */
+.news-card {
+  background: #fff;
+  border-radius: 22px;
+  overflow: hidden;
+  box-shadow: 0 12px 35px rgba(0,0,0,0.06);
+  transition: all .35s ease;
+  height: 100%;
+}
+
+.news-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 45px rgba(0,0,0,0.1);
+}
+
+.news-card img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+}
+
+.news-card-content {
+  padding: 25px;
+}
+
+.news-date {
+  color: #b11226;
+  font-weight: 600;
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+
+.news-title {
+  font-size: 22px;
+  font-weight: 700;
+  color: #0d2b5c;
+  line-height: 1.5;
+  margin-bottom: 14px;
+}
+
+.news-desc {
+  color: #555;
+  line-height: 1.7;
+  font-size: 15px;
+}
+
+/* Events Section */
+.events-board {
+  margin-top: 90px;
+}
+
+.board-card {
+  background: #fff;
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 12px 35px rgba(0,0,0,0.06);
+  height: 100%;
+}
+
+.board-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.board-header h3 {
+  font-size: 30px;
+  color: #0d2b5c;
+  font-weight: 700;
+}
+
+.board-header a {
+  text-decoration: none;
+  color: #0d6efd;
+  font-weight: 600;
+}
+
+.board-divider {
+  height: 1px;
+  background: #e4e7ec;
+  margin-bottom: 25px;
+}
+
+.board-list {
+  max-height: 420px;
+  overflow-y: auto;
+  padding-right: 8px;
+}
+
+/* Custom Scrollbar */
+.board-list::-webkit-scrollbar {
+  width: 6px;
+}
+
+.board-list::-webkit-scrollbar-thumb {
+  background: #9d1111;
+  border-radius: 10px;
+}
+
+/* Announcement Item */
+.announce-item {
+  display: flex;
+  gap: 18px;
+  margin-bottom: 28px;
+}
+
+.announce-icon {
+  min-width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  background: rgba(177,18,38,0.08);
+  color: #b11226;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+}
+
+.announce-content h5 {
+  font-size: 19px;
+  line-height: 1.5;
+  margin-bottom: 8px;
+  color: #0d2b5c;
+  font-weight: 600;
+}
+
+.announce-content span {
+  color: #0d6efd;
+  font-weight: 600;
+  font-size: 15px;
+}
+
+/* Quick Links */
+.quick-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.quick-links li {
+  margin-bottom: 18px;
+}
+
+.quick-links li a {
+  text-decoration: none;
+  color: #0d2b5c;
+  font-size: 19px;
+  font-weight: 600;
+  transition: all .3s ease;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.quick-links li a:hover {
+  color: #0d6efd;
+  transform: translateX(6px);
+}
+
+.no-events {
+  color: #0d2b5c;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+@media(max-width:991px){
+
+  .news-main-title h2{
+    font-size: 30px;
+  }
+
+  .board-card{
+    margin-bottom: 25px;
+  }
+
+  .news-card img{
+    height: 220px;
+  }
+
+}
   </style>
 
 
@@ -1078,6 +1293,271 @@
           </div><!-- End Info Item -->
 
         </div>
+
+        <!-----News and Updates---->
+        <!-- ========================= -->
+<!-- NEWS / EVENTS SECTION -->
+<!-- ========================= -->
+
+<section class="news-events-wrapper">
+
+  <div class="container">
+
+    <!-- SECTION TITLE -->
+    <div class="news-main-title" data-aos="fade-up">
+      <span>NEWS & UPDATES</span>
+      <h2>The latest News & Updates</h2>
+    </div>
+
+    <!-- NEWS CARDS -->
+    <div class="row g-4">
+
+      <!-- CARD 1 -->
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+        <div class="news-card">
+          <img src="assets/img/news/news1.jpg" alt="">
+          <div class="news-card-content">
+            <div class="news-date">
+              <i class="bi bi-calendar-event"></i> 17 Mar 2026
+            </div>
+
+            <h4 class="news-title">
+              Community Awareness Training Program
+            </h4>
+
+            <p class="news-desc">
+              Rusco Foundation continues strengthening public awareness and
+              social protection education through nationwide outreach programs.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 2 -->
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+        <div class="news-card">
+          <img src="assets/img/news/news2.jpg" alt="">
+          <div class="news-card-content">
+            <div class="news-date">
+              <i class="bi bi-calendar-event"></i> 10 Mar 2026
+            </div>
+
+            <h4 class="news-title">
+              Youth Empowerment & Education Support
+            </h4>
+
+            <p class="news-desc">
+              Supporting communities through education initiatives and
+              sustainable empowerment opportunities for vulnerable groups.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 3 -->
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+        <div class="news-card">
+          <img src="assets/img/news/news3.jpg" alt="">
+          <div class="news-card-content">
+            <div class="news-date">
+              <i class="bi bi-calendar-event"></i> 06 Mar 2026
+            </div>
+
+            <h4 class="news-title">
+              Stakeholder Partnership Meeting
+            </h4>
+
+            <p class="news-desc">
+              Strengthening collaboration with partners and institutions to
+              improve support services and economic recovery initiatives.
+            </p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- EVENTS / ANNOUNCEMENTS -->
+    <div class="events-board">
+
+      <div class="row g-4">
+
+        <!-- EVENTS -->
+        <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+
+          <div class="board-card">
+
+            <div class="board-header">
+              <h3>Events</h3>
+              <a href="#">View All <i class="bi bi-arrow-right"></i></a>
+            </div>
+
+            <div class="board-divider"></div>
+
+            <div class="board-list">
+
+              <p class="no-events">
+                No Events Yet!
+              </p>
+
+            </div>
+
+          </div>
+
+        </div>
+
+        <!-- ANNOUNCEMENTS -->
+        <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
+
+          <div class="board-card">
+
+            <div class="board-header">
+              <h3>Announcements</h3>
+              <a href="#">View All <i class="bi bi-arrow-right"></i></a>
+            </div>
+
+            <div class="board-divider"></div>
+
+            <div class="board-list">
+
+              <div class="announce-item">
+                <div class="announce-icon">
+                  <i class="bi bi-megaphone-fill"></i>
+                </div>
+
+                <div class="announce-content">
+                  <h5>Emergency Support Registration Program Open</h5>
+                  <span>
+                    <i class="bi bi-calendar3"></i> 10 Mar 2026
+                  </span>
+                </div>
+              </div>
+
+              <div class="announce-item">
+                <div class="announce-icon">
+                  <i class="bi bi-megaphone-fill"></i>
+                </div>
+
+                <div class="announce-content">
+                  <h5>Volunteer Applications Now Available</h5>
+                  <span>
+                    <i class="bi bi-calendar3"></i> 03 Mar 2026
+                  </span>
+                </div>
+              </div>
+
+              <div class="announce-item">
+                <div class="announce-icon">
+                  <i class="bi bi-megaphone-fill"></i>
+                </div>
+
+                <div class="announce-content">
+                  <h5>Insurance Awareness Workshop Registration</h5>
+                  <span>
+                    <i class="bi bi-calendar3"></i> 17 Feb 2026
+                  </span>
+                </div>
+              </div>
+
+              <div class="announce-item">
+                <div class="announce-icon">
+                  <i class="bi bi-megaphone-fill"></i>
+                </div>
+
+                <div class="announce-content">
+                  <h5>Community Recovery Training Seminar</h5>
+                  <span>
+                    <i class="bi bi-calendar3"></i> 26 Jan 2026
+                  </span>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+        <!-- QUICK LINKS -->
+        <div class="col-lg-4" data-aos="fade-up" data-aos-delay="300">
+
+          <div class="board-card">
+
+            <div class="board-header">
+              <h3>Quick Links</h3>
+            </div>
+
+            <div class="board-divider"></div>
+
+            <div class="board-list">
+
+              <ul class="quick-links">
+
+                <li>
+                  <a href="#">
+                    About Rusco Foundation
+                    <i class="bi bi-chevron-right"></i>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    Emergency Support
+                    <i class="bi bi-chevron-right"></i>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    Community Projects
+                    <i class="bi bi-chevron-right"></i>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    Volunteer Programs
+                    <i class="bi bi-chevron-right"></i>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    Insurance Awareness
+                    <i class="bi bi-chevron-right"></i>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    Contact Support
+                    <i class="bi bi-chevron-right"></i>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    FAQs
+                    <i class="bi bi-chevron-right"></i>
+                  </a>
+                </li>
+
+              </ul>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+        <!----end of news and updates--->
 
         <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="400">
           <div class="row gy-4">
