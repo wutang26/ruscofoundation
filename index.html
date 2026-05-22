@@ -1722,44 +1722,7 @@
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
 
-<script>
-  document.getElementById('contactForm').addEventListener('submit', function (e) {
-    e.preventDefault();
-
-    const form = this;
-    const formData = new FormData(form);
-
-    const loading = form.querySelector('.loading');
-    const errorMessage = form.querySelector('.error-message');
-    const sentMessage = form.querySelector('.sent-message');
-
-    loading.style.display = 'block';
-    errorMessage.textContent = '';
-    sentMessage.style.display = 'none';
-
-    fetch(form.action, {
-      method: 'POST',
-      body: formData
-    })
-      .then(response => response.json())
-      .then(data => {
-        loading.style.display = 'none';
-        if (data.status === 'success') {
-          sentMessage.textContent = data.message;
-          sentMessage.style.display = 'block';
-          form.reset();
-        } else {
-          errorMessage.textContent = data.message;
-        }
-      })
-      .catch(error => {
-        loading.style.display = 'none';
-        errorMessage.textContent = 'An error occurred. Please try again.';
-        console.error(error);
-      });
-  });
-</script>
-
+<script> document.getElementById('contactForm').addEventListener('submit', function (e) { e.preventDefault(); // Prevent default form submit const form = this; const formData = new FormData(form); const loading = form.querySelector('.loading'); const errorMessage = form.querySelector('.error-message'); const sentMessage = form.querySelector('.sent-message'); loading.style.display = 'block'; errorMessage.textContent = ''; sentMessage.style.display = 'none'; fetch(form.action, { method: 'POST', body: formData }) .then(response => response.json()) .then(data => { loading.style.display = 'none'; if (data.status === 'success') { sentMessage.textContent = data.message; sentMessage.style.display = 'block'; form.reset(); } else { errorMessage.textContent = data.message; } }) .catch(error => { loading.style.display = 'none'; errorMessage.textContent = 'An error occurred. Please try again.'; console.error(error); }); }); </script>
 </body>
 
 </html>
